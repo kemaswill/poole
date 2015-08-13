@@ -7,7 +7,7 @@ tags: []
 ---
 {% include JB/setup %}
 
-##Matrix Factorization
+## Matrix Factorization
 
 In Recommender System, **Matrix Factorization** maps both the users and items to a joint latent factor space of dimension $k$, such that the user-item interaction can be modeled as the inner product in this space. That is to say, we map each user $i$ to a vector $p_i\in \mathbb{R}^k$, and each item $j$ to a vector $q_j \in \mathbb{R}^k$. For movie recommendation, each dimension of the latent factor space can be explained as a topic, say comedy v.s. drama, or other features such as amount of action, orientation to children and so on.
 Given the latent vector for user $u$ and item $i$, we can predict the interaction between them as $$\hat{r_{ui}}=q_i^Tp_u\tag{1}$$
@@ -17,29 +17,24 @@ Matrix Factorization is a method which focus only on the observed ratings only, 
 
 Here $\kappa$ is the set of $(u, i)$pairs for which $r_{ui}$ is known in the training set.
 
-###Optimization by SGD
+### Optimization by SGD
 
 The above cost function $(2)$ works as following
 
 > Stochastic Gradient Descent for Matrix Factorization
-
 >> Util termination(Iterate the training data N times, or when the cost function converges)
-
 > > > For each rating $r_{ui}$ in the training set
-
 > > > > $e_{ui} \stackrel{\text{def}}{=} r_{ui} - q_i^Tp_u$
-
 > > > > $q_i \gets q_i + \gamma(e_{ui} p_u -\lambda q_i)$
-
 > > > > $p_u \gets p_u + \gamma (e_{ui}q_i -\lambda p_u)$
 
-###Adding Biases
+### Adding Biases
 
 The $(2)$ only interpret the rating $r_{ui}$ as an interaction between the user $u$ and item $i$, but in the fact,  the rating values can also due to effects associated with either users or items. For example, in the recommender system, some user tend to give higher rating than others, or some items is in general better than others. To consider all such effects, we can add a bias term to the $(1)$
 $$\hat{r_{ui}} = \mu + b_i + b_u + q_i^Tp_u\tag{3}$$
  and the corresponding cost function is $$\min_{p^*,q^*, b^*}\sum_{(u, i)\in \kappa}(r_{ui}-\mu-b_u-b_i-p_u^Tq_i)^2 + \lambda(||p_u||^2 + ||q_i||^2 + b_u^2 + b_i^2)\tag{4}$$
 
-##Factorization Machines
+## Factorization Machines
 
 Original Matrix Factorization use only the rating information. What if we can get more features about the user and item? Such as the gender and age information of user, or the category or sale information about the item. Koren has mentioned that we can also use matrix factorization when adding more informations. For example, if we also have the implicit feedback such as the purchase or browsing history, as well as some user attributes.
 We denote $N(u)$ as the sets of items for which user $u$ has expressed an implicit feedback,  where each item $i$ is associated with $x_i \in \mathbb{R}^f$. So a user who showed a preference for items in $N(u)$ is characterized by $$|N(u)|^{-0.5}\sum_{i\in N(u)}x_i\tag{4}$$
@@ -64,7 +59,7 @@ So we can reformulate $(9)$ as $$\min_{u, i \in R}(R_{u, i} - f_u^TP^TQg_i)^2$$
 We can think $$Pf_u \text{ and }Qg_i$$
  as the latent representation of user $u$ and item $i$ in the latent space respectively. This is **Factorization Machine**.
 
-##Field-Aware Factorization Machine
+## Field-Aware Factorization Machine
 
 Factorization Machine can effectively model the interaction between user and item, as well as the user side and item side features. But what if there are more than 3 dimension? For example, in the CTR prediction for computational advertising, we may have User, Advertisement as well as Publisher. There is interaction between the User and Advertisement, as well as interaction between User and Publisher. The Field-Aware Factorization Machine can handle all such interactions.
 The formulation of FFM is$$\min_w \sum_{i=1}^L(log(1 + exp(-y_I \phi(w, x_i)))  + \frac{\lambda}{2}||w||^2$$
