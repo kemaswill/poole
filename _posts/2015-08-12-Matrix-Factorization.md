@@ -130,6 +130,7 @@ $$\phi(w, x)=\sum_{j_1, j_2 \in C_2}\langle w_{j_1, f_2}, w_{j_2, f_1}\rangle x_
 
 where $f_1$ and $f_2$ are respectively the fields of $j_1$ and $j_2$.
 Here is a concrete example, say there is a sample:
+
 |User(Us)|Movie(Mo)|Gender(Ge)|Price(Pr)|
 |--|--|--|--|
 |YuChin(YC)|3Idiots(3I)|Comedy, Drama(Co, Dr)|$9.99|
