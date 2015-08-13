@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Introducing Poole
+title: Matrix Factorization
 ---
 
 ##Matrix Factorization
