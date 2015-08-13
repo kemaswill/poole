@@ -23,11 +23,14 @@ Here $\kappa$ is the set of $(u, i)$pairs for which $r_{ui}$ is known in the tra
 The above cost function $(2)$ works as following
 
 > Stochastic Gradient Descent for Matrix Factorization
->> Util termination(Iterate the training data N times, or when the cost function converges)
-> > > For each rating $r_{ui}$ in the training set
-> > > > $e_{ui} \stackrel{\text{def}}{=} r_{ui} - q_i^Tp_u$
-> > > > $q_i \gets q_i + \gamma(e_{ui} p_u -\lambda q_i)$
-> > > > $p_u \gets p_u + \gamma (e_{ui}q_i -\lambda p_u)$
+> 
+> For each rating $r_{ui}$ in the training set
+> 
+> $e_{ui} \stackrel{\text{def}}{=} r_{ui} - q_i^Tp_u$
+> 
+> $q_i \gets q_i + \gamma(e_{ui} p_u -\lambda q_i)$
+> 
+> $p_u \gets p_u + \gamma (e_{ui}q_i -\lambda p_u)$
 
 ### Adding Biases
 
@@ -54,7 +57,7 @@ Then the predicted rating can be modeled by
 
 $$\hat{r}_{ui}=\mu + b_i + b_u + q_i^T[p_u + |N(u)|^{-0.5}\sum_{i\in N(u)}x_i + \sum_{a\in A(u)}y^a]\tag{6}$$
 
-Although Matrix Factorization can model such kind of implicit feedback and user or item attribute features, $Factorization Machine$ can handle such kind of features more directly. Assume that the user $u$ and item $i$ have feature vectors$f_u$ and $g_i$, we can formulate the following regression cost function:
+Although Matrix Factorization can model such kind of implicit feedback and user or item attribute features, **Factorization Machine** can handle such kind of features more directly. Assume that the user $u$ and item $i$ have feature vectors$f_u$ and $g_i$, we can formulate the following regression cost function:
 
 $$\min_w\sum_{u, i \in R}(R_{u, i} - w^T\begin{bmatrix}f_u \\ g_i\end{bmatrix})\tag{7}$$
 
