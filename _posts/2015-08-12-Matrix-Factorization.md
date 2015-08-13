@@ -1,11 +1,7 @@
 ---
 layout: post
-title: "From Matrix Factotization to Factorization Machine to Field Aware Factorization Machine"
-description: ""
-category: Machine Learning, Recommender System, Click Model, Sponsor Search
-tags: []
+title: Introducing Poole
 ---
-{% include JB/setup %}
 
 ##Matrix Factorization
 In Recommender System, **Matrix Factorization** maps both the users and items to a joint latent factor space of dimension $k$, such that the user-item interaction can be modeled as the inner product in this space. That is to say, we map each user $i$ to a vector $p_i\in \mathbb{R}^k$, and each item $j$ to a vector $q_j \in \mathbb{R}^k$. For movie recommendation, each dimension of the latent factor space can be explained as a topic, say comedy v.s. drama, or other features such as amount of action, orientation to children and so on.
