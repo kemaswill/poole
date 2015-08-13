@@ -1,9 +1,6 @@
 ---
 layout: post
-title: "From Matrix Factotization to Factorization Machine to Field Aware Factorization Machine"
-description: ""
-category: Machine Learning, Recommender System, Click Model, Sponsor Search
-tags: []
+title: "Matrix Factorization"
 ---
 {% include JB/setup %}
 
