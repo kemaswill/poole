@@ -17,7 +17,10 @@ baseurl:             "http://kemaswill.github.io/poole/"
 sass:
   sass_dir:          _sass
   style:            :compressed
-
+  
+kramdown:
+  input: GFM
+  
 # About/contact
 author:
   name:              Mark Otto
