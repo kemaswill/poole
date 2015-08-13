@@ -108,7 +108,7 @@ where
 
 $$\phi(w, x) = \sum_{j_1, j_2 \in C_2}\langle w_{j_1, f_2}, w_{j_2, f_1} \rangle x_{j_1}x_{j_2}$$
 
-where $f_1, f_2$ are respectively the field of $j_1$ and $j_2$, and $w_{j_1, f_2}$ and $w_{j_2, f_1}$ are two vectors with length $k$. Here the field means the dimension, for the recommender system, typically there are 2 dimensions: User and Item. For CTR prediction, there are typically 3 dimensions: User, Advertisement and Publisher. But actually we can build one dimension for each ID features, or even category features. 
+where $f_1, f_2$ are respectively the field of $j_1$ and $j_2$, and $w_{j_1, f_2}$ and $w_{j_2, f_1}$ are two vectors with length $k$ . Here the field means the dimension, for the recommender system, typically there are 2 dimensions: User and Item. For CTR prediction, there are typically 3 dimensions: User, Advertisement and Publisher. But actually we can build one dimension for each ID features, or even category features. 
 YuChin Juan has showed the formulation from linear model, to degree-2 polynomial model, to factorization machine and finally field-aware factorization machine models.
 The formulation of **linear model** is
 
