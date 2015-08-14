@@ -5,9 +5,9 @@ permalink:           pretty
 relative_permalinks: true
 
 # Setup
-title:               Poole
-tagline:             The Jekyll Butler
-url:                 http://getpoole.com
+title:               Kemaswill's Blog
+tagline:             In the Honor of Machine Learning
+url:                 http://kemaswill.github.io/poole/
 paginate:            5
 baseurl:             "http://kemaswill.github.io/poole/"
 
@@ -21,11 +21,11 @@ sass:
   
 # About/contact
 author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+  name:              Junwei Pan
+  url:               http://kemaswill.github.io/poole/
+  email:             pandevirus@gmail.com
 
 # Custom vars
 version:             2.0.0
 github:
-  repo:              https://github.com/poole/poole
+  repo:              http://kemaswill.github.io/poole/
