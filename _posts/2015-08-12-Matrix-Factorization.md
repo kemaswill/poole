@@ -146,9 +146,15 @@ $$+  \langle w_{Ge-Co ,Ge} ,w_{Ge-Dr , Ge}\rangle x_{Ge-Co} x_{Ge-Dr}+ \langle w
 $$ + \langle w_{Ge-Dr ,Pr} ,w_{Pr , Ge}\rangle x_{Ge-Dr} x_{Pr}$$
 
 Reference:
+
 [1]. Matrix Factorization Techniques for Recommender System. Y. Koren, et. at.
+
 [2]. Matrix Factorization and Factorization Machine for Recommender Systems[Slides]. Chih-Jen Lin.
+
 [3]. Factorization Machines. Steffen Rendle.
+
 [4]. 3 Idiots' Approach for Display Advertising Challenge[Slides]. Yu-Chin Juan, Yong Zhuang, and Wei-Sheng Chin.
+
 [5]. Field-aware Factorization Machine[Slides]. Yu-Chin Juan, Yong Zhuang, and Wei-Sheng Chin.
+
 [6]. Pairwise interaction tensor factorization for personalized tag recommendation. Steffen Rendle, Lars Schmidt-Thieme.
