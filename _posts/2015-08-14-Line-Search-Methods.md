@@ -3,8 +3,6 @@ layout: post
 title: "Line Search Methods"
 ---
 
-Line Search Methods
-===
 
 Each iteration of a line search method computes a search direction $p_k$, and then decides how far to move along this direction. The iteration is given by
 
