@@ -26,7 +26,7 @@ The above cost function $(2)$ works as following
 > 
 > For each rating $r_{ui}$ in the training set
 > 
-> let $$ e_{ui} \stackrel{\text{def}}{=} r_{ui} - q_i^T p_u $$
+> $ e_{ui} \stackrel{\text{def}}{=} r_{ui} - q_i^T p_u $
 > 
 > $q_i \gets q_i + \gamma(e_{ui} p_u -\lambda q_i)$
 > 
