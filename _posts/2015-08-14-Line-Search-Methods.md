@@ -1,11 +1,7 @@
 ---
 layout: post
-title: "Line Searc Methods"
-description: ""
-category: 
-tags: []
+title: "Line Search Methods"
 ---
-{% include JB/setup %}
 
 Line Search Methods
 ===
