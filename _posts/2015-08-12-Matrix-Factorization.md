@@ -126,7 +126,9 @@ The formulation of **factorization machine** is
 
 $$\phi(w, x) = \sum_{j_1, j_2 \in C_2}\langle w_{j_1}, w_{j_2}x_{j_1}x_{j_2}\rangle$$
 
-where $w_{j_1}$ and $w_{j_2}$ are two vectors with length 
+where $w_{j_1}$ and 
+
+$w_{j_2}$ are two vectors with length 
 
 $k$
 
