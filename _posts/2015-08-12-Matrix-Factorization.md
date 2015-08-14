@@ -26,7 +26,7 @@ The above cost function $(2)$ works as following
 > 
 > For each rating $r_{ui}$ in the training set
 > 
-> $ e_{ui} \stackrel{\text{def}}{=} r_{ui} - q_i^T p_u $
+> let $$ e_{ui} \stackrel{\text{def}}{=} r_{ui} - q_i^T p_u $$
 > 
 > $q_i \gets q_i + \gamma(e_{ui} p_u -\lambda q_i)$
 > 
@@ -148,14 +148,9 @@ $$ + \langle w_{Ge-Dr ,Pr} ,w_{Pr , Ge}\rangle x_{Ge-Dr} x_{Pr}$$
 
 Reference:
 
-[1]. Matrix Factorization Techniques for Recommender System. Y. Koren, et. at.
-
-[2]. Matrix Factorization and Factorization Machine for Recommender Systems[Slides]. Chih-Jen Lin.
-
-[3]. Factorization Machines. Steffen Rendle.
-
-[4]. 3 Idiots' Approach for Display Advertising Challenge[Slides]. Yu-Chin Juan, Yong Zhuang, and Wei-Sheng Chin.
-
-[5]. Field-aware Factorization Machine[Slides]. Yu-Chin Juan, Yong Zhuang, and Wei-Sheng Chin.
-
-[6]. Pairwise interaction tensor factorization for personalized tag recommendation. Steffen Rendle, Lars Schmidt-Thieme.
+   [1]. Matrix Factorization Techniques for Recommender System. Y. Koren, et. at.
+   [2]. Matrix Factorization and Factorization Machine for Recommender Systems[Slides]. Chih-Jen Lin.
+   [3]. Factorization Machines. Steffen Rendle.
+   [4]. 3 Idiots' Approach for Display Advertising Challenge[Slides]. Yu-Chin Juan, Yong Zhuang, and Wei-Sheng Chin.
+   [5]. Field-aware Factorization Machine[Slides]. Yu-Chin Juan, Yong Zhuang, and Wei-Sheng Chin.
+   [6]. Pairwise interaction tensor factorization for personalized tag recommendation. Steffen Rendle, Lars Schmidt-Thieme.
