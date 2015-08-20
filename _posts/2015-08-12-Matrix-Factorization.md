@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Matrix Factorization"
+title: "From Matrix Factorization to Factorization Machines"
 ---
 
 
