@@ -123,7 +123,7 @@ where
 
 $$w_0 \in \mathbb{R}, w \in \mathbb{R}^n, W^{(2)} \in \mathbb{R}^{n \times n}\tag{11}$$
 
-The difference between FMs and SVM is that, all interactionsparameters $w_{i, j}$ of SVM are completely independent, e.g. $w_{i, j}$ and $w_{i, l}$. While the interaction parameters of FMs are factorized, so that the interaction $\langle v_i, v_j \rangle$ and $\langle v_i, v_l \rangle$ both depends on the vector $v_i$. 
+The difference between FMs and SVM is that, all interactionsparameters $$w_{i, j}$$ of SVM are completely independent, e.g. $$w_{i, j}$$ and $$w_{i, l}$$. While the interaction parameters of FMs are factorized, so that the interaction $$\langle v_i, v_j \rangle$$ and $$\langle v_i, v_l \rangle$$ both depends on the vector $$v_i$$. 
 
 ## Field-Aware Factorization Machine
 
