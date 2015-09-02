@@ -97,6 +97,34 @@ $$Pf_u \text{ and }Qg_i$$
 
  as the latent representation of user $u$ and item $i$ in the latent space respectively. This is **Factorization Machine**.
 
+### Factorization Machines v.s. SVM
+
+The SVM can be expressed as the dot product between the parameters $w$ and transformed input $x$ via a basis function $\phi(x)$: $\hat{y}(x) = \langle \phi(x), w \rangle$. The mapping $\phi$ is related with the kernal:
+
+$$K: \mathbb{R}^n \times \mathbb{R}^n \to \mathbb{R}, K(x, z) = \langle \phi(x), \phi(z) \rangle$$
+
+#### Linear Kernel
+
+The simplest kernel is linear kernel: $K_l(x, z) := \langle x, z\rangle$, so that the model equation of linear SVM is:
+
+$$\hat{y}(x) = w_0 + \sum_{i=1}^n w_i x_i, w_0 \in \mathbb{R}, w \in \mathbb{R}^n$$
+
+#### Polynomial Kernel
+
+The polynomial kernel can model interactions between variables. The kernel is defined as $K(x, z) := (\langle x, z\rangle)^d$. For $d=2$, the mapping is :
+
+$$\phi(x) := (1, \sqrt{2}x_1,...,\sqrt2 x_n, x_1^2,...,x_n^2,..., \sqrt2 x_1 x_2,..., \sqrt2 x_1x_n, \sqrt2 x_2 x_3,..., \sqrt2 x_{n-1}x_n) $$
+
+So the model equation for polynimial SVMs can be written as:
+
+$$\hat{y}(x) = w_0 + \sqrt2 \sum_{i=1}^nw_ix_i + \sum_{i=1}^n w_{i, i}^{(2)}x_i^2 + \sqrt2 \sum_{i=1}^n\sum_{j=i+1}^nw_{i, j}^{(2)}x_ix_j$$
+
+where
+
+$$w_0 \in \mathbb{R}, w \in \mathbb{R}^n, W^{(2)} \in \mathbb{R}^{n \times n}\tag{11}$$
+
+The difference between FMs and SVM is that, all interactionsparameters $w_{i, j}$ of SVM are completely independent, e.g. $w_{i, j}$ and $w_{i, l}$. While the interaction parameters of FMs are factorized, so that the interaction $\langle v_i, v_j \rangle$ and $\langle v_i, v_l \rangle$ both depends on the vector $v_i$. 
+
 ## Field-Aware Factorization Machine
 
 Factorization Machine can effectively model the interaction between user and item, as well as the user side and item side features. But what if there are more than 3 dimension? For example, in the CTR prediction for computational advertising, we may have User, Advertisement as well as Publisher. There is interaction between the User and Advertisement, as well as interaction between User and Publisher. The Field-Aware Factorization Machine can handle all such interactions.
