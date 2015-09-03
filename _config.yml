@@ -9,8 +9,8 @@ title:               Kemaswill's Blog
 tagline:             In the Honor of Machine Learning
 url:                 http://kemaswill.github.io/poole/
 paginate:            5
-#baseurl:             "http://kemaswill.github.io/poole/"
-baseurl: http://steelx.github.io/best-internet-tips/
+baseurl:             "http://kemaswill.github.io/poole/"
+
 
 # Assets
 #
