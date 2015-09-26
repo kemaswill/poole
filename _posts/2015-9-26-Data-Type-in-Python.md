@@ -7,7 +7,7 @@ title: Data Type in Python
 
 In C programming language, when we assign a value to a variable, it actually create a block of memory space so that it can hold the value for that variable. So
 
-```
+```python
 int a = 1;
 ```
 
@@ -16,7 +16,7 @@ is like to put the value in a box(memory space) with the variable name as follow
 
 If you change the value of the variable, then the new value will be put in the box, so 
 
-```
+```python
 int a = 2;
 ```
 
@@ -34,7 +34,7 @@ Python just binds the name ```a``` to the object ```1```, when we change the val
 
 So what will happen if we assign a variable to another?
 
-```
+```python
 a = 2
 b = a
 ```
@@ -47,7 +47,7 @@ While in Python, this is not the case. Assigning one variable to another, or mor
 
 We can verify this by the ```id()``` function, which returns the identity[^Note2] of the object:
 
-```
+```python
 >>> a = 1
 >>> b = a
 >>> id(a)
@@ -60,7 +60,7 @@ We can verify this by the ```id()``` function, which returns the identity[^Note2
 
 So what will happen if we change ```b``` to another value, or more precisely, bind ```b``` to another object?
 
-```
+```python
 >>> a = 1
 >>> b = a
 >>> id(a)
@@ -76,7 +76,7 @@ So what will happen if we change ```b``` to another value, or more precisely, bi
 
 As we can see, now the name ```b``` is bond to a new object ```2```, while the name ```a``` keep unchanged. Is this always the case? Let's see the following example:
 
-```
+```python
 >>> l1 = [1,2,3]
 >>> l2 = l1
 >>> l2[0] = 4
@@ -99,7 +99,7 @@ In Python, Data Type can be classified into two category: Mutable Type and Immut
 
 The difference can be summarized as following:
 
-```
+```python
 x = something # immutable type
 print x
 func(x)
@@ -127,7 +127,7 @@ print x # might print something different
 
 As we can see in the previous sections, when we copy a variable of mutable type by ```b = a```, then if we change the new variable ```b```, the original variable ```a``` will also be changed. Sometime we want to avoid such side effect, this is how shallow and deep copy can help us:
 
-```
+```python
 >>> import copy
 >>> l1 = [1, 2, 3]
 >>> l2 = copy.copy(l1)
@@ -146,7 +146,7 @@ As we can see in the previous sections, when we copy a variable of mutable type 
 
 As we can see, by using ```copy.copy()```function, we now bind the name ```b``` to a new object with which contains the same thing while with different identity. However, ```copy.copy()``` may fails when the copied object is a compound object, see below:
 
-```
+```python
 >>> import copy
 >>> l1 = [1, 2, [3, 4], [5, 6]]
 >>> l2 = copy.copy(l1)
@@ -170,7 +170,7 @@ We can see that if we change the element in the shallow copied object ```l2```, 
    - A shallow copy constructs a new compound object and then inserts reference into it to the objects found in the original object.
    - A deep copy constructs a new compound object and then, recursively, inserts copies into it of the object found in the original.
 
-```
+```python
 >>> import copy
 >>> l1 = [1, 2, [3, 4], [5, 6]]
 >>> l2 = copy.deepcopy(l1)
