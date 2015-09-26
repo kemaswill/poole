@@ -3,8 +3,9 @@ layout: post
 title: Data Type in Python
 ---
 
-``` 
-import copy
+```
+import copy #xx
+
 l1 = [1, 2, [3, 4], [5, 6]]
 l2 = copy.deepcopy(l1)
 l2[2][0] = 10
