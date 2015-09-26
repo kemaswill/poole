@@ -170,7 +170,7 @@ We can see that if we change the element in the shallow copied object ```l2```, 
    - A shallow copy constructs a new compound object and then inserts reference into it to the objects found in the original object.
    - A deep copy constructs a new compound object and then, recursively, inserts copies into it of the object found in the original.
 
-```python
+``` 
 import copy
 l1 = [1, 2, [3, 4], [5, 6]]
 l2 = copy.deepcopy(l1)
@@ -181,30 +181,13 @@ l2
 [1, 2, [10, 4], [5, 6]]
 ```
 
-```
-x = 0
-x = 2 + 2
-what is x
-```
-
-```
-
-```
-
-
-
-
 ## Reference
 
-[1]. [Understanding Python variables and Memory Management](http://foobarnbaz.com/2012/07/08/understanding-python-variables/)
-
-[2]. [Drastically Improve Your Python: Understanding Python's Execution Model](https://www.jeffknupp.com/blog/2013/02/14/drastically-improve-your-python-understanding-pythons-execution-model/)
-
-[3]. [Data Model, Python](https://docs.python.org/2/reference/datamodel.html#id5)
-
-[4]. [Data Types, Python Programming](https://en.wikibooks.org/wiki/Python_Programming/Data_Types)
-
-[5]. [Immutable v.s. Mutable Types, Python](http://stackoverflow.com/questions/8056130/immutable-vs-mutable-types-python)
+   [1]. [Understanding Python variables and Memory Management](http://foobarnbaz.com/2012/07/08/understanding-python-variables/)
+   [2]. [Drastically Improve Your Python: Understanding Python's Execution Model](https://www.jeffknupp.com/blog/2013/02/14/drastically-improve-your-python-understanding-pythons-execution-model/)
+   [3]. [Data Model, Python](https://docs.python.org/2/reference/datamodel.html#id5)
+   [4]. [Data Types, Python Programming](https://en.wikibooks.org/wiki/Python_Programming/Data_Types)
+   [5]. [Immutable v.s. Mutable Types, Python](http://stackoverflow.com/questions/8056130/immutable-vs-mutable-types-python)
 
 
 [^Note1]: Everything in Python is a object, even the "integer literal" ```10``` is a object. By run ```dir(10)``` you can get a list of attributes ```10``` has: ```['__abs__', '__add__', '__and__',...,'numerator','real']```.
