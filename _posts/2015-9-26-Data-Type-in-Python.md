@@ -171,13 +171,13 @@ We can see that if we change the element in the shallow copied object ```l2```, 
    - A deep copy constructs a new compound object and then, recursively, inserts copies into it of the object found in the original.
 
 ```python
->import copy
->l1 = [1, 2, [3, 4], [5, 6]]
->l2 = copy.deepcopy(l1)
->l2[2][0] = 10
-> l1
+import copy
+l1 = [1, 2, [3, 4], [5, 6]]
+l2 = copy.deepcopy(l1)
+l2[2][0] = 10
+l1
 [1, 2, [3, 4], [5, 6]]
-> l2
+l2
 [1, 2, [10, 4], [5, 6]]
 ```
 
