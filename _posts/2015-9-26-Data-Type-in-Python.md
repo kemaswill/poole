@@ -10,13 +10,16 @@ In C programming language, when we assign a value to a variable, it actually cre
 ```
 int a = 1;
 ```
+
 is like to put the value in a box(memory space) with the variable name as following
 ![enter image description here](https://lh3.googleusercontent.com/H_VkNqeuwnFsQJimdifOAA76wLklBVl-Dl3JzrhTyfU=s0 "a1box.png")
 
 If you change the value of the variable, then the new value will be put in the box, so 
+
 ```
 int a = 2;
 ```
+
 will result in
 ![enter image description here](https://lh3.googleusercontent.com/27oN3JtVfNiu4V7QQI58nslrPmHqE6yRVom2NynGkNs=s0 "a2box.png")
 
@@ -30,10 +33,12 @@ Python just binds the name ```a``` to the object ```1```, when we change the val
 ## Mutable Type v.s. Immutable Type
 
 So what will happen if we assign a variable to another?
+
 ```
 a = 2
 b = a
 ```
+
 In C, assigning one variable to another makes a copy of the value and put that value in the new box:
 ![enter image description here](https://lh3.googleusercontent.com/27oN3JtVfNiu4V7QQI58nslrPmHqE6yRVom2NynGkNs=s0 "a2box.png")![enter image description here](https://lh3.googleusercontent.com/p95kf5La-x_HgLqCi5XEE3P3p4hGl4NjjR7rASOFjM0=s0 "b2box.png")
 
@@ -41,6 +46,7 @@ While in Python, this is not the case. Assigning one variable to another, or mor
 ![enter image description here](https://lh3.googleusercontent.com/X4fDmNk_L_Xc-A8OStmEtuC77D_1oNVSXWqglzTEXR8=s0 "ab2tag.png")
 
 We can verify this by the ```id()``` function, which returns the identity[^Note2] of the object:
+
 ```
 >>> a = 1
 >>> b = a
@@ -53,6 +59,7 @@ We can verify this by the ```id()``` function, which returns the identity[^Note2
 [^Note2]: An object’s identity never changes once it has been created; you may think of it as the object’s address in memory, please refer to [3] for more details.
 
 So what will happen if we change ```b``` to another value, or more precisely, bind ```b``` to another object?
+
 ```
 >>> a = 1
 >>> b = a
@@ -66,7 +73,9 @@ So what will happen if we change ```b``` to another value, or more precisely, bi
 >>> id(b)
 140192199542992
 ```
+
 As we can see, now the name ```b``` is bond to a new object ```2```, while the name ```a``` keep unchanged. Is this always the case? Let's see the following example:
+
 ```
 >>> l1 = [1,2,3]
 >>> l2 = l1
@@ -80,6 +89,7 @@ As we can see, now the name ```b``` is bond to a new object ```2```, while the n
 >>> id(l2)
 4540233344
 ```
+
 Quite weird, right? After we change the elements in ```l2```, the ```l1``` and ```l2```are still bond to the same object. Why?
 
 In Python, Data Type can be classified into two category: Mutable Type and Immutable Type:
@@ -116,6 +126,7 @@ print x # might print something different
 ## Shallow Copy v.s. Deep Copy
 
 As we can see in the previous sections, when we copy a variable of mutable type by ```b = a```, then if we change the new variable ```b```, the original variable ```a``` will also be changed. Sometime we want to avoid such side effect, this is how shallow and deep copy can help us:
+
 ```
 >>> import copy
 >>> l1 = [1, 2, 3]
@@ -132,7 +143,9 @@ As we can see in the previous sections, when we copy a variable of mutable type 
 >>> l1
 [1, 2, 3]
 ```
+
 As we can see, by using ```copy.copy()```function, we now bind the name ```b``` to a new object with which contains the same thing while with different identity. However, ```copy.copy()``` may fails when the copied object is a compound object, see below:
+
 ```
 >>> import copy
 >>> l1 = [1, 2, [3, 4], [5, 6]]
@@ -174,9 +187,13 @@ We can see that if we change the element in the shallow copied object ```l2```, 
 ## Reference
 
 [1]. [Understanding Python variables and Memory Management](http://foobarnbaz.com/2012/07/08/understanding-python-variables/)
+
 [2]. [Drastically Improve Your Python: Understanding Python's Execution Model](https://www.jeffknupp.com/blog/2013/02/14/drastically-improve-your-python-understanding-pythons-execution-model/)
+
 [3]. [Data Model, Python](https://docs.python.org/2/reference/datamodel.html#id5)
+
 [4]. [Data Types, Python Programming](https://en.wikibooks.org/wiki/Python_Programming/Data_Types)
+
 [5]. [Immutable v.s. Mutable Types, Python](http://stackoverflow.com/questions/8056130/immutable-vs-mutable-types-python)
 
 
