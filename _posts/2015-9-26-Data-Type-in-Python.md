@@ -3,6 +3,17 @@ layout: post
 title: Data Type in Python
 ---
 
+``` 
+import copy
+l1 = [1, 2, [3, 4], [5, 6]]
+l2 = copy.deepcopy(l1)
+l2[2][0] = 10
+l1
+[1, 2, [3, 4], [5, 6]]
+l2
+[1, 2, [10, 4], [5, 6]]
+```
+
 ## Value in Box v.s. Binding Name on Object
 
 In C programming language, when we assign a value to a variable, it actually create a block of memory space so that it can hold the value for that variable. So
