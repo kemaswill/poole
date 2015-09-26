@@ -3,12 +3,9 @@ layout: post
 title: Data Type in Python
 ---
 
-```python
-s = "Python syntax highlighting"
-print s
-```
 
-```
+
+{% highlight python %}
 import copy #xx
 
 l1 = [1, 2, [3, 4], [5, 6]]
@@ -18,7 +15,7 @@ l1
 [1, 2, [3, 4], [5, 6]]
 l2
 [1, 2, [10, 4], [5, 6]]
-```
+{% endhighlight %}
 
 ## Value in Box v.s. Binding Name on Object
 
