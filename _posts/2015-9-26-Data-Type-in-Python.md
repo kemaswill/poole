@@ -200,9 +200,12 @@ l2
 ## Reference
 
    [1]. [Understanding Python variables and Memory Management](http://foobarnbaz.com/2012/07/08/understanding-python-variables/)
+   
    [2]. [Drastically Improve Your Python: Understanding Python's Execution Model](https://www.jeffknupp.com/blog/2013/02/14/drastically-improve-your-python-understanding-pythons-execution-model/)
-   [3]. [Data Model, Python](https://docs.python.org/2/reference/datamodel.html#id5)
+   
+
    [4]. [Data Types, Python Programming](https://en.wikibooks.org/wiki/Python_Programming/Data_Types)
+   
    [5]. [Immutable v.s. Mutable Types, Python](http://stackoverflow.com/questions/8056130/immutable-vs-mutable-types-python)
 
 
