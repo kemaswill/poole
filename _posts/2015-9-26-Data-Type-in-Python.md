@@ -3,6 +3,11 @@ layout: post
 title: Data Type in Python
 ---
 
+```python
+s = "Python syntax highlighting"
+print s
+```
+
 ```
 import copy #xx
 
