@@ -7,13 +7,7 @@ title: Data Type in Python
 
 ## Value in Box v.s. Binding Name on Object
 
-In C programming language, when we assign a value to a variable, it actually create a block of memory space so that it can hold the value for that variable. So
-
-{% highlight python %}
-int a = 1;
-{% endhighlight %}
-
-is like to put the value in a box(memory space) with the variable name as following
+In C programming language, when we assign a value to a variable, it actually create a block of memory space so that it can hold the value for that variable. So ```int a = 1;```is like to put the value in a box(memory space) with the variable name, as shown below
 ![enter image description here](https://lh3.googleusercontent.com/H_VkNqeuwnFsQJimdifOAA76wLklBVl-Dl3JzrhTyfU=s0 "a1box.png")
 
 If you change the value of the variable, then the new value will be put in the box, so 
