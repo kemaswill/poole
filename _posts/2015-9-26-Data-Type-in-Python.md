@@ -19,7 +19,7 @@ int a = 2;
 will result in
 ![enter image description here](https://lh3.googleusercontent.com/27oN3JtVfNiu4V7QQI58nslrPmHqE6yRVom2NynGkNs=s0 "a2box.png")
 
-However, in Python, the variable works in a quite different way. When we write```int a = 1``` in Python, it's wrong to say that ```a``` "contains" a ```1``` object[^Note1]. Rather, ```a``` is the **name** with **binding** to the **object** ```10```. **Instead of variables, Python has name and bindings**, as shown below:
+However, in Python, the variable works in a quite different way. When we write```int a = 1``` in Python, it's wrong to say that ```a``` "contains" a ```1``` object. Rather, ```a``` is the **name** with **binding** to the **object** ```10```. **Instead of variables, Python has name and bindings**[^Note1], as shown below:
 
 ![enter image description here](https://lh3.googleusercontent.com/JUMJNSI1tjyiyWr-HEGDbNX0ZqQAjjUlVa8gtU8plR8=s0 "a1tag.png")
 
