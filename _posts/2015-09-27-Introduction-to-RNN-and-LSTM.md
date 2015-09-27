@@ -36,7 +36,7 @@ $$\delta_h^t=\theta'(a_h^t)(\sum_{k=1}^K\delta_k^t w_{hk} + \sum_{h'=1}^H\delta_
 
 where
 
-$$\delta_j^t = \frac{\partial \mathcal{L}}{\partial a_j^t}$$.
+$$\delta_j^t = \frac{\partial \mathcal{L}}{\partial a_j^t}$$
 
 The complete sequence of $\delta$ terms can be calculated by starting at $t=T$ and recursively applying $(3)$, decrementing $t$ at each step.(Note that $\delta_j^{T+1} = 0, \forall j$). Note that the same weights are reused at each timestamp, we sum over the whole sequence to get the derivatives w.r.t. the network weights:
 
@@ -70,7 +70,7 @@ The multiplicative gates allow LSTM memory cells to store and access information
 
 ### Forward Pass
 
-$w_{ij}$ is the weight of connection fro unit $i$ to unit $j$
+$w_{ij}$ is the weight of connection fro unit $i$ to unit $j$,
 $I, K,H$ is the number of inputs, outputs and memory cells in hidden layer. $C$ is the number of memory cells in a memory block.
 $w_{c\iota}, w_{c\phi}, w_{c\omega}$ is the peephole weights from cell $c$ to the input, forget and output gates.
 Note that only the cell outputs $b_c^t$ are connected to the other cells in the hidden layer. The other LSTM activations, such as the states, the cell inputs, or the gate activations, are only visible within the block. We use $h$ to refer to cell outputs from other blocks in the hidden layer.
