@@ -86,14 +86,15 @@ As we can see, now the name ```b``` is bond to a new object ```2```, while the n
 4540233344
 {% endhighlight %}
 
-Quite weird, right? After we change the elements in ```l2```, the ```l1``` and ```l2```are still bond to the same object. Why?
+Quite weird, right? After we change the elements in ```l2```, the ```l1``` and ```l2```are still bond to the same object. However, after we change the value of a int variable[^Note3], we found that the two names are bond to different object. The reason is that, the int object is immutable while the list object is mutable, see below for a full list:
 
-In Python, Data Type can be classified into two category: Mutable Type and Immutable Type:
+[^Note3]: Actually Python is a dynamic typed programming language, so here we means binding a name which previously bond to an int object to another int object.
+
 
    - Mutable Type: byte array, list, set, dict
    - Immutable Type: int, float, long, complex, str, bytes, tuple, frozen set
 
-The difference can be summarized as following:
+So when you change the value of immutable type, actually the name is bond to a new object. On the other hand, when you change the value of mutable type, the object is really changed. This be summarized as following:
 
 {% highlight python %}
 x = something # immutable type
@@ -165,6 +166,7 @@ As we can see, by using ```copy.copy()```function, we now bind the name ```b``` 
 {% endhighlight %}
 
 We can see that if we change the element in the shallow copied object ```l2```, it will not change the corresponding ```l1```. But if we change the element of the element in ```l2```, it will change ```l1```. This is because:
+
    - A shallow copy constructs a new compound object and then inserts reference into it to the objects found in the original object.
    - A deep copy constructs a new compound object and then, recursively, inserts copies into it of the object found in the original.
 
