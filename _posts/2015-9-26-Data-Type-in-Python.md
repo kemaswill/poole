@@ -38,7 +38,7 @@ b = a
 In C, assigning one variable to another makes a copy of the value and put that value in the new box:
 ![enter image description here](https://lh3.googleusercontent.com/27oN3JtVfNiu4V7QQI58nslrPmHqE6yRVom2NynGkNs=s0 "a2box.png")![enter image description here](https://lh3.googleusercontent.com/p95kf5La-x_HgLqCi5XEE3P3p4hGl4NjjR7rASOFjM0=s0 "b2box.png")
 
-While in Python, this is not the case. Assigning one variable to another, or more precisely in Python, binding a name to another, the new name is just bond to the object bond by the original name, like following
+While in Python, this is not the case. Assigning one variable to another, or more precisely in Python, binding a name to another, means that the new name is just bond to the object bond by the original name, like following
 ![enter image description here](https://lh3.googleusercontent.com/X4fDmNk_L_Xc-A8OStmEtuC77D_1oNVSXWqglzTEXR8=s0 "ab2tag.png")
 
 We can verify this by the ```id()``` function, which returns the identity[^Note2] of the object:
