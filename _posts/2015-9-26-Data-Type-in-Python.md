@@ -8,7 +8,8 @@ title: Data Type in Python
 ## Value in Box v.s. Binding Name on Object
 
 In C programming language, when we assign a value to a variable, it actually create a block of memory space so that it can hold the value for that variable. So ```int a = 1;```is like to put the value in a box(memory space) with the variable name, as shown below
-![enter image description here](https://lh3.googleusercontent.com/H_VkNqeuwnFsQJimdifOAA76wLklBVl-Dl3JzrhTyfU=s0 "a1box.png")
+                 
+ ![enter image description here](https://lh3.googleusercontent.com/H_VkNqeuwnFsQJimdifOAA76wLklBVl-Dl3JzrhTyfU=s0 "a1box.png")
 
 If you change the value of the variable, then the new value will be put in the box, so 
 
@@ -187,7 +188,8 @@ We can see that if we change the element in the shallow copied object ```l2```, 
    [1]. [Understanding Python variables and Memory Management](http://foobarnbaz.com/2012/07/08/understanding-python-variables/)
    
    [2]. [Drastically Improve Your Python: Understanding Python's Execution Model](https://www.jeffknupp.com/blog/2013/02/14/drastically-improve-your-python-understanding-pythons-execution-model/)
-   
+      
+   [3]. [Shallow and Deep Copy](http://www.python-course.eu/deep_copy.php) 
 
    [4]. [Data Types, Python Programming](https://en.wikibooks.org/wiki/Python_Programming/Data_Types)
    
@@ -195,4 +197,5 @@ We can see that if we change the element in the shallow copied object ```l2```, 
 
 
 [^Note1]: Everything in Python is a object, even the "integer literal" ```10``` is a object. By run ```dir(10)``` you can get a list of attributes ```10``` has: ```['__abs__', '__add__', '__and__',...,'numerator','real']```.
+
 
