@@ -74,11 +74,7 @@ $w_{ij}$ is the weight of connection fro unit $i$ to unit $j$.
 
 $I, K,H$ is the number of inputs, outputs and memory cells in hidden layer. $C$ is the number of memory cells in a memory block. 
 
-$w_{c\iota}$
-
-, $w_{c\phi}$
-
-,$w_{c\omega}$ is the peephole weights from cell $c$ to the input, forget and output gates.
+$w_{c\iota}$ , $w_{c\phi}$ ,$w_{c\omega}$ is the peephole weights from cell $c$ to the input, forget and output gates.
 
 Note that only the cell outputs $b_c^t$ are connected to the other cells in the hidden layer. The other LSTM activations, such as the states, the cell inputs, or the gate activations, are only visible within the block. We use $h$ to refer to cell outputs from other blocks in the hidden layer.
 
